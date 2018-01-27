@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  dev:
+    image: triestpa/dev-env
+    tty: true
+    ports:
+      - 8080:8080
+      - 3000:3000
+      - 3002:3002
+    env_file: dev.env
+    depends_on:
+      - postgres
+      - redis
+      - elasticsearch
+    volumes:
+      - ~/Development:/Development
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.1.1
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9300:9300
+      - 9200:9200
