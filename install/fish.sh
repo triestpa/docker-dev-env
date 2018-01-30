@@ -6,5 +6,4 @@ chsh -s /usr/bin/fish
 curl -L https://get.oh-my.fish > install
 fish install --noninteractive
 
-echo omf install foreign-env nvm bobthefish | fish
-echo set -U theme_powerline_fonts no | fish
+echo omf install foreign-env nvm godfather | fish
