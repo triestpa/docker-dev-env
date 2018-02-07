@@ -5,7 +5,6 @@ RUN apt-get update
 COPY ./install/*.sh  setup/
 COPY ./config/config.vim /root/.vimrc
 COPY ./config/config.vim /root/.config/nvim/init.vim
-COPY ./config/config.fish /root/.config/fish/config.fish
 
 RUN bash setup/utils.sh
 RUN bash setup/fish.sh
@@ -19,6 +18,8 @@ RUN bash setup/python.sh
 
 RUN bash setup/psql.sh
 RUN bash setup/redis.sh
+
+COPY ./config/config.fish /root/.config/fish/config.fish
 
 WORKDIR /usr/src/work
 CMD /usr/bin/fish
