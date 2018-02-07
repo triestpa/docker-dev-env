@@ -1,6 +1,6 @@
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-Plug 'chriskempson/base16-vim'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/mru.vim'
@@ -14,8 +14,7 @@ Plug 'terryma/vim-multiple-cursors'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-let base16colorspace=256
-silent! colorscheme base16-default-dark
+silent! colorscheme onedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General

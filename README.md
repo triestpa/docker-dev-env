@@ -7,7 +7,7 @@ To use this image, you can either clone this repository and build it from the `D
 Includes:
 - [Ubuntu 16.04](https://hub.docker.com/_/ubuntu/) as the base image.
 - [Fish shell](https://fishshell.com/) with [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) plugin framework and the [Godfather](https://github.com/oh-my-fish/theme-godfather) theme.
-- [Vim](http://www.vim.org/) and [Neovim](https://neovim.io/) with the [vim-plug](https://github.com/junegunn/vim-plug) plugin manager, [base16-dark](https://github.com/chriskempson/base16-vim) color scheme, and a full configuration based loosely on ["The Ultimate Vim Configuration](https://github.com/amix/vimrc).
+- [Vim](http://www.vim.org/) and [Neovim](https://neovim.io/) with the [vim-plug](https://github.com/junegunn/vim-plug) plugin manager, [onedark](https://github.com/joshdick/onedark.vim) color scheme, and a full configuration based loosely on ["The Ultimate Vim Configuration](https://github.com/amix/vimrc).
 - [NVM](https://github.com/creationix/nvm), defaulting to using Node v8.
 - [Python](https://www.python.org/) 2 and 3, with [Pip](https://pypi.python.org/pypi/pip).
 - [Scipy](https://www.scipy.org/) stack (currently disabled, due to it's effect on image size).
